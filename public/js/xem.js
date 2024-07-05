@@ -9,7 +9,7 @@ const renderList = async () => {
                 data = res;
                 let content = '';
                 data.map((ele, index) => {
-                    let img = 'http://localhost:3000/assets/image/404.svg';
+                    let img = '';
                     if(ele.image)  {
                         img = ele.image?.includes('http') ? ele.image : `http://localhost:3000/${ele.image}`;
                     }
@@ -19,7 +19,7 @@ const renderList = async () => {
             <td style="text-align: center"><strong>${ele.name}</strong></td>
             <td style="text-align: center">${ele.price}</td>
             <td style="text-align: center">
-            <img src="${img}" alt="phone-img" width="150" height="150">
+            <img src="${img}" alt="${ele.name}" width="150" height="150">
             </td>
             <td style="text-align: center">
                 <button class="btn btn-warning btn-sm" onclick ="btnEdit('${ele._id}')"  id='btnEdit'>
