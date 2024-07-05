@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!-- header -->
+<%- include('./partials/head') %>
+<body>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <%- include('./partials/sidebar') %>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <%- include('./partials/navigation') %>
+        <!-- Page content-->
+        <div class="container-fluid">
+            <h1 class="mt-4">Danh Sách Hàng Hoá</h1>
+            <div class="container" id="content-wrap">
+                <main role="main" class="pb-5 mb-5">
+                    <div class="container">
+                        <div class="my-5">
+                            <div class="row mx-0 gy-4" id="phoneList"></div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<%- include('./partials/admin-footer') %>
+<script type="module" src="/assets/js/home.js"></script>
+</body>
+</html>

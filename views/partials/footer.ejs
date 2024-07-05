@@ -1,0 +1,33 @@
+<span class="social-links">
+  <a href="https://github.com/TanNhatCMS" target="_blank">
+    <img src="/assets/image/icons/github.svg" alt="Github">
+  </a>
+</span>
+<script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/jquery.js" referrerpolicy="no-referrer"></script>
+<script src="/assets/js/sweetalert2.min.js"></script>
+<script src="/assets/js/axios.min.js"></script>
+<% if (notifications !== undefined) { %>
+    <script>
+        window.addEventListener('load', function () {
+            const status = '<%= notifications.status %>';
+            let icon;
+            if (status === 'true') {
+                icon = 'success';
+            } else {
+                icon = 'error';
+            }
+            const title = '<%= notifications.title %>';
+            const message = '<%= notifications.message %>';
+            Swal.fire({
+                icon: icon,
+                title: title,
+                text: message,
+                showConfirmButton: false,
+                timer: 1500,
+            });
+        });
+    </script>
+<% } %>
+
