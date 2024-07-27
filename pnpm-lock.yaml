@@ -10,7 +10,7 @@ importers:
     dependencies:
       axios:
         specifier: ^1.7.2
-        version: 1.7.2(debug@4.3.5)
+        version: 1.7.2(debug@4.3.6)
       body-parser:
         specifier: ^1.20.2
         version: 1.20.2
@@ -27,8 +27,8 @@ importers:
         specifier: ^2.8.5
         version: 2.8.5
       debug:
-        specifier: 4.3.5
-        version: 4.3.5(supports-color@5.5.0)
+        specifier: 4.3.6
+        version: 4.3.6(supports-color@5.5.0)
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
@@ -230,8 +230,8 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+  debug@4.3.6:
+    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -809,9 +809,9 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.2(debug@4.3.5):
+  axios@1.7.2(debug@4.3.6):
     dependencies:
-      follow-redirects: 1.15.6(debug@4.3.5)
+      follow-redirects: 1.15.6(debug@4.3.6)
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -981,7 +981,7 @@ snapshots:
     dependencies:
       ms: 2.0.0
 
-  debug@4.3.5(supports-color@5.5.0):
+  debug@4.3.6(supports-color@5.5.0):
     dependencies:
       ms: 2.1.2
     optionalDependencies:
@@ -1120,9 +1120,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  follow-redirects@1.15.6(debug@4.3.5):
+  follow-redirects@1.15.6(debug@4.3.6):
     optionalDependencies:
-      debug: 4.3.5(supports-color@5.5.0)
+      debug: 4.3.6(supports-color@5.5.0)
 
   form-data@4.0.0:
     dependencies:
@@ -1297,7 +1297,7 @@ snapshots:
 
   mquery@5.0.0:
     dependencies:
-      debug: 4.3.5(supports-color@5.5.0)
+      debug: 4.3.6(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -1312,7 +1312,7 @@ snapshots:
   nodemon@3.1.4:
     dependencies:
       chokidar: 3.6.0
-      debug: 4.3.5(supports-color@5.5.0)
+      debug: 4.3.6(supports-color@5.5.0)
       ignore-by-default: 1.0.1
       minimatch: 3.1.2
       pstree.remy: 1.1.8
