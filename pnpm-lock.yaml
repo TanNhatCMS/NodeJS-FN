@@ -10,22 +10,22 @@ importers:
     dependencies:
       axios:
         specifier: ^1.7.2
-        version: 1.7.2(debug@4.3.5)
+        version: 1.7.2(debug@4.3.5(supports-color@5.5.0))
       body-parser:
         specifier: ^1.20.2
-        version: 1.20.2
+        version: 1.20.2(supports-color@5.5.0)
       cheerio:
         specifier: 1.0.0-rc.12
         version: 1.0.0-rc.12
       compression:
         specifier: ^1.7.4
-        version: 1.7.4
+        version: 1.7.4(supports-color@5.5.0)
       cookie-parser:
         specifier: 1.4.6
         version: 1.4.6
       cors:
         specifier: ^2.8.5
-        version: 2.8.5
+        version: 2.8.6
       debug:
         specifier: 4.3.5
         version: 4.3.5(supports-color@5.5.0)
@@ -37,22 +37,22 @@ importers:
         version: 3.1.10
       express:
         specifier: 4.19.2
-        version: 4.19.2
+        version: 4.19.2(supports-color@5.5.0)
       express-promise-router:
         specifier: ^4.1.1
-        version: 4.1.1(express@4.19.2)
+        version: 4.1.1(express@4.19.2(supports-color@5.5.0))
       express-session:
         specifier: ^1.18.0
-        version: 1.18.0
+        version: 1.18.0(supports-color@5.5.0)
       mongodb:
         specifier: ^6.8.0
         version: 6.8.0
       mongoose:
         specifier: ^8.4.4
-        version: 8.4.4
+        version: 8.4.4(supports-color@5.5.0)
       morgan:
         specifier: 1.10.0
-        version: 1.10.0
+        version: 1.10.0(supports-color@5.5.0)
     devDependencies:
       env-cmd:
         specifier: ^10.1.0
@@ -127,6 +127,7 @@ packages:
   bson@6.8.0:
     resolution: {integrity: sha512-iOJg8pr7wq2tg/zSlCCHMi3hMm5JTOxLTagf3zxhcenHsFp+c6uOs6K7W5UE7A4QIJGtqh/ZovFNMP4mOPJynQ==}
     engines: {node: '>=16.20.1'}
+    deprecated: a critical bug affecting only useBigInt64=true deserialization usage is fixed in bson@6.10.3
 
   bytes@3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
@@ -207,8 +208,8 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
-  cors@2.8.5:
-    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+  cors@2.8.6:
+    resolution: {integrity: sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==}
     engines: {node: '>= 0.10'}
 
   cross-spawn@7.0.3:
@@ -809,9 +810,9 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.2(debug@4.3.5):
+  axios@1.7.2(debug@4.3.5(supports-color@5.5.0)):
     dependencies:
-      follow-redirects: 1.15.6(debug@4.3.5)
+      follow-redirects: 1.15.6(debug@4.3.5(supports-color@5.5.0))
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -825,11 +826,11 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
-  body-parser@1.20.2:
+  body-parser@1.20.2(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -923,12 +924,12 @@ snapshots:
     dependencies:
       mime-db: 1.52.0
 
-  compression@1.7.4:
+  compression@1.7.4(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       bytes: 3.0.0
       compressible: 2.0.18
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       on-headers: 1.0.2
       safe-buffer: 5.1.2
       vary: 1.1.2
@@ -956,7 +957,7 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  cors@2.8.5:
+  cors@2.8.6:
     dependencies:
       object-assign: 4.1.1
       vary: 1.1.2
@@ -977,9 +978,11 @@ snapshots:
 
   css-what@6.1.0: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.3.5(supports-color@5.5.0):
     dependencies:
@@ -1044,18 +1047,18 @@ snapshots:
 
   etag@1.8.1: {}
 
-  express-promise-router@4.1.1(express@4.19.2):
+  express-promise-router@4.1.1(express@4.19.2(supports-color@5.5.0)):
     dependencies:
-      express: 4.19.2
+      express: 4.19.2(supports-color@5.5.0)
       is-promise: 4.0.0
       lodash.flattendeep: 4.4.0
       methods: 1.1.2
 
-  express-session@1.18.0:
+  express-session@1.18.0(supports-color@5.5.0):
     dependencies:
       cookie: 0.6.0
       cookie-signature: 1.0.7
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       on-headers: 1.0.2
       parseurl: 1.3.3
@@ -1064,21 +1067,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  express@4.19.2:
+  express@4.19.2(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.2
+      body-parser: 1.20.2(supports-color@5.5.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.6.0
       cookie-signature: 1.0.6
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 1.0.2
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.2.0
+      finalhandler: 1.2.0(supports-color@5.5.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.1
@@ -1090,8 +1093,8 @@ snapshots:
       qs: 6.11.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.18.0
-      serve-static: 1.15.0
+      send: 0.18.0(supports-color@5.5.0)
+      serve-static: 1.15.0(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -1108,9 +1111,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.2.0:
+  finalhandler@1.2.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       encodeurl: 1.0.2
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -1120,7 +1123,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  follow-redirects@1.15.6(debug@4.3.5):
+  follow-redirects@1.15.6(debug@4.3.5(supports-color@5.5.0)):
     optionalDependencies:
       debug: 4.3.5(supports-color@5.5.0)
 
@@ -1264,13 +1267,13 @@ snapshots:
       bson: 6.8.0
       mongodb-connection-string-url: 3.0.1
 
-  mongoose@8.4.4:
+  mongoose@8.4.4(supports-color@5.5.0):
     dependencies:
       bson: 6.8.0
       kareem: 2.6.3
       mongodb: 6.6.2
       mpath: 0.9.0
-      mquery: 5.0.0
+      mquery: 5.0.0(supports-color@5.5.0)
       ms: 2.1.3
       sift: 17.1.3
     transitivePeerDependencies:
@@ -1283,10 +1286,10 @@ snapshots:
       - socks
       - supports-color
 
-  morgan@1.10.0:
+  morgan@1.10.0(supports-color@5.5.0):
     dependencies:
       basic-auth: 2.0.1
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       on-finished: 2.3.0
       on-headers: 1.0.2
@@ -1295,7 +1298,7 @@ snapshots:
 
   mpath@0.9.0: {}
 
-  mquery@5.0.0:
+  mquery@5.0.0(supports-color@5.5.0):
     dependencies:
       debug: 4.3.5(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -1397,9 +1400,9 @@ snapshots:
 
   semver@7.6.2: {}
 
-  send@0.18.0:
+  send@0.18.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -1415,12 +1418,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.15.0:
+  serve-static@1.15.0(supports-color@5.5.0):
     dependencies:
       encodeurl: 1.0.2
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.18.0
+      send: 0.18.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
